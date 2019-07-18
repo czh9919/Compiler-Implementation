@@ -1,0 +1,66 @@
+%-*- coding:UTF-8 -*-
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{enumerate}
+
+\title{绪论}
+\author{czh}
+
+\bibliographystyle{plain}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \section{树语言的数据结构}
+    文法如下
+
+
+    \begin{tabular}{rr}
+        \hline
+        Stm->Stm:Stm & (CompoundStm) \\
+        Stm->id:=Exp & (AssignStm) \\
+        Stm->print(ExpList) & (PrintStm) \\
+        Exp->id & (IdExp) \\
+        Exp->num & (NumExp) \\
+        Exp->Exp Binop Exp & (OpExp) \\
+        Exp->(Stm,Exp) & (EseqExp) \\
+        ExpList->Exp,ExpList & (PairExpList) \\
+        ExpList->Exp & (LastExpList) \\
+        Binop -> + & (Plus) \\
+        Binop -> - & (Minus) \\
+        Binop -> * & (Times) \\
+        Binop -> / & (Div) \\
+        \hline
+    \end{tabular}
+
+
+    把文法定义为typedef如下
+
+
+    \begin{tabular}{rr}
+        \hline
+        文法 & typedef \\
+        \hline
+        Stm & A\_Stm \\
+        Exp & A\_exp \\
+        ExpList & A\_expList \\
+        id & string \\
+        num & int \\
+        \hline
+    \end{tabular}
+
+
+    代码见P1\_1.h及P1\_1.cpp。
+    
+
+    规定一些东西
+
+    \begin{enumerate}[(1)]
+        \item 树都用文法来描述
+        \item 一棵树用一至多个typedef描述。每个typedef对应文法中的符号。
+        \item 每个typedef定义一个指向相应的struct的指针。
+        \item 略，见书
+    \end{enumerate}
+
+\end{document}

@@ -5,6 +5,7 @@
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceFolder}",
+                "${workspaceFolder}/**",
                 "C:/LLVM/lib/gcc/x86_64-w64-mingw32/5.1.0/include",
                 "C:/LLVM/include",
                 "C:/LLVM/x86_64-w64-mingw32/include",
@@ -21,6 +22,7 @@
             "browse": {
                 "path": [
                     "${workspaceFolder}",
+                    "${workspaceFolder}/**",
                     "C:/LLVM/lib/gcc/x86_64-w64-mingw32/5.1.0/include",
                     "C:/LLVM/include",
                     "C:/LLVM/x86_64-w64-mingw32/include",
